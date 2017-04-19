@@ -1,0 +1,9 @@
+<section class="app">
+<h3>Top Ten Links from <%= link_to "URL Lockbox", "http://localhost:3000/login" %></h3>
+
+<% @links.each do |link| %>
+  <h4><%= link.title %></h4>
+  <%= link_to link.url, link.url %>: Read <%= link.read_count %> times
+  <hr>
+<% end %>
+</div>
