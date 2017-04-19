@@ -4,6 +4,9 @@ class Api::V1::LinksController < BaseController
     render json: @links
   end
 
+  def new
+  end
+
   def create
     @link = Link.find_or_initialize_by(link_params)
     @link.read_count += 1
